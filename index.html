@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minebox Lobby</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Minebox</h1>
+
+    <section id="skin-section">
+        <h2>Skin</h2>
+        <div class="skin-box">
+            <p>Skin Preview</p>
+            <button id="customize-skin">Customize</button>
+        </div>
+        <div class="skin-actions">
+            <input type="file" id="import-skin" accept=".mbs">
+            <button id="export-skin">Export Skin (.MBS)</button>
+        </div>
+    </section>
+
+    <div class="modal" style="display:none;">
+        <div class="modal-content">
+            <h2>Customize Skin</h2>
+            <div>
+                <h3>Head & Body (Top)</h3>
+                <div id="grid-top"></div>
+            </div>
+            <div>
+                <h3>Legs (Bottom)</h3>
+                <div id="grid-bottom"></div>
+            </div>
+            <div>
+                <h3>Color Palette</h3>
+                <div id="palette"></div>
+            </div>
+            <button id="close-modal">Close</button>
+        </div>
+    </div>
+
+    <section id="world-section">
+        <h2>World</h2>
+        <label for="world-name">World Name:</label>
+        <input type="text" id="world-name">
+
+        <label for="game-mode">Game Mode:</label>
+        <select id="game-mode">
+            <option value="creator">Creator</option>
+            <option value="survivor">Survivor</option>
+            <option value="ghost">Ghost</option>
+            <option value="viewer">Viewer</option>
+        </select>
+
+        <div class="world-actions">
+            <input type="file" id="import-world" accept=".mbw">
+            <button id="export-world">Export World (.MBW)</button>
+        </div>
+
+        <button id="create-world">Create & Play</button>
+    </section>
+
+    <section id="mod-section">
+        <h2>Mods</h2>
+        <div class="mod-actions">
+            <input type="file" id="import-mod" accept=".mbm" multiple>
+            <button id="list-mods">List Loaded Mods</button>
+        </div>
+        <ul id="mod-list">
+            <li>No mods loaded.</li>
+        </ul>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
